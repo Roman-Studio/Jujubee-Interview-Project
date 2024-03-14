@@ -13,11 +13,7 @@ MonoBehaviour:
   m_Name: MachineGunFirearmWeapon
   m_EditorClassIdentifier: 
   <Name>k__BackingField: Machine Gun
-  <Icon>k__BackingField:
-    m_AssetGUID: 
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
+  <Icon>k__BackingField: {fileID: 21300000, guid: b9debb81a782e6f419aae1f4b0c3d381, type: 3}
   <Damage>k__BackingField: 10
   <MagazineCapacity>k__BackingField: 30
   <StartingMagazines>k__BackingField: 1

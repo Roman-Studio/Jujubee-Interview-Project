@@ -13,10 +13,6 @@ MonoBehaviour:
   m_Name: SwordMeleeWeapon
   m_EditorClassIdentifier: 
   <Name>k__BackingField: Sword
-  <Icon>k__BackingField:
-    m_AssetGUID: 
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
+  <Icon>k__BackingField: {fileID: 21300000, guid: 6ccbeddf9d3fe3a4f8ccc11f849d9a48, type: 3}
   <Damage>k__BackingField: 15
   <StaminaCost>k__BackingField: 20

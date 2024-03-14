@@ -15,6 +15,11 @@ namespace Jujubee.Logic.Weapons
             WeaponType = weaponType;
         }
 
+        public virtual IJBWeapon GetWeaponType()
+        {
+            return WeaponType;
+        }
+
         public abstract void UseWeapon();
     }
 }

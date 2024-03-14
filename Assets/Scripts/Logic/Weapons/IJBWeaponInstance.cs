@@ -2,6 +2,7 @@
 {
     public interface IJBWeaponInstance
     {
+        IJBWeapon GetWeaponType();
         void UseWeapon();
     }
 }

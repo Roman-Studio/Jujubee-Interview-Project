@@ -1,12 +1,11 @@
-﻿using UnityEngine.AddressableAssets;
+﻿using UnityEngine;
 
 namespace Jujubee.Logic.Weapons
 {
     public interface IJBWeapon
     {
         string Name { get; }
-        AssetReferenceSprite Icon { get; }
-        float Damage { get; }
+        Sprite Icon { get; }
         IJBWeaponInstance CreateInstance();
     }
 }

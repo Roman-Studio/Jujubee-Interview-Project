@@ -13,11 +13,7 @@ MonoBehaviour:
   m_Name: PistolFirearmWeapon
   m_EditorClassIdentifier: 
   <Name>k__BackingField: Pistol
-  <Icon>k__BackingField:
-    m_AssetGUID: 
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
+  <Icon>k__BackingField: {fileID: 21300000, guid: 989feb4edfc241d4fb137bed9b6c00ee, type: 3}
   <Damage>k__BackingField: 5
   <MagazineCapacity>k__BackingField: 5
   <StartingMagazines>k__BackingField: 2

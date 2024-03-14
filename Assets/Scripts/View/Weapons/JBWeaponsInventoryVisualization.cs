@@ -1,8 +1,11 @@
 ﻿using System.Collections;
+using Jujubee.Logic.Weapons;
 using Jujubee.View.Core;
 using Jujubee.View.Player;
 using TMPro;
 using UnityEngine;
+using UnityEngine.AddressableAssets;
+using UnityEngine.ResourceManagement.AsyncOperations;
 using UnityEngine.UI;
 
 namespace Jujubee.View.Weapons
@@ -17,6 +20,8 @@ namespace Jujubee.View.Weapons
 
         [SerializeField]
         private Image _WeaponIcon;
+        
+        private AsyncOperationHandle<Sprite> _LoadIconOperationHandle;
 
         private IEnumerator Start()
         {
@@ -38,7 +43,34 @@ namespace Jujubee.View.Weapons
         {
             var weaponType = _WeaponsInventory.SelectedWeaponInstance.GetWeaponType();
             _WeaponName.text = weaponType.Name;
-            _WeaponIcon.sprite = weaponType.Icon;
+            StartCoroutine(LoadItemIcon(weaponType));
+        }
+
+        private IEnumerator LoadItemIcon(IJBWeapon weaponType)
+        {
+            yield return UnloadPreviousIcon();
+            _LoadIconOperationHandle = Addressables.LoadAssetAsync<Sprite>(weaponType.IconAssetReference);
+            _LoadIconOperationHandle.Completed += SetWeaponIconAfterLoad;
+        }
+
+        private void SetWeaponIconAfterLoad(AsyncOperationHandle<Sprite> operationHandle)
+        {
+            _WeaponIcon.sprite = operationHandle.Result;
+        }
+
+        private IEnumerator UnloadPreviousIcon()
+        {
+            if (!_LoadIconOperationHandle.IsValid())
+            {
+                yield break;
+            }
+            
+            if (!_LoadIconOperationHandle.IsDone)
+            {
+                yield return new WaitUntil(() => _LoadIconOperationHandle.IsDone);
+            }
+            
+            Addressables.Release(_LoadIconOperationHandle);
         }
     }
 }

@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.AddressableAssets;
 
 namespace Jujubee.Logic.Weapons
 {
@@ -6,9 +7,9 @@ namespace Jujubee.Logic.Weapons
     {
         [field: SerializeField]
         public string Name { get; private set; }
-        
+
         [field: SerializeField]
-        public Sprite Icon { get; private set; }
+        public AssetReferenceSprite IconAssetReference { get; private set; }
         
         [field: SerializeField]
         public float Damage { get; private set; }

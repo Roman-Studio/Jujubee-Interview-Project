@@ -4,7 +4,7 @@ using Jujubee.Logic.Weapons;
 using NaughtyAttributes;
 using UnityEngine;
 
-namespace Jujubee.Logic.Player
+namespace Jujubee.View.Player
 {
     public class JBPlayerWeaponsInventory : MonoBehaviour
     {

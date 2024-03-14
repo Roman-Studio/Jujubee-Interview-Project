@@ -46,6 +46,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _WeaponsInventory: {fileID: 7181441108807025338}
+  _UseWeaponActionReference: {fileID: 2749044536004587125, guid: 42580db8c0c7c434da80e5477a88edc5, type: 3}
+  _NextWeaponActionReference: {fileID: 7636204516744689257, guid: 42580db8c0c7c434da80e5477a88edc5, type: 3}
 --- !u!1 &7181441108807025336
 GameObject:
   m_ObjectHideFlags: 0
